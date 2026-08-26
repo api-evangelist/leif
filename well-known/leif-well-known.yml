@@ -1,0 +1,220 @@
+generated: '2026-08-25'
+method: probed
+source: live GET of each /.well-known/* path on every Leif host resolved from DNS (2026-08-25)
+note: 'No Leif host serves a single .well-known document. leif.org and www.leif.org terminate the TLS
+  handshake with an alert (the Webflow custom-domain certificate no longer provisions), app.leif.org and
+  staging.leif.org return origin 504/503 on every path, api.leif.org and sandbox.leif.org are AWS API
+  Gateway stages that answer the unmatched-route default for every path, and partners.leif.org serves
+  a Webflow catch-all. No WellKnown or SecurityTxt pointer is emitted from this file: it records an absence,
+  not a presence.'
+hosts:
+- host: leif.org
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+    note: TLS handshake failed at the Webflow edge; host serves no HTTPS
+  - path: /.well-known/openid-configuration
+    status: 0
+    file: null
+    note: TLS handshake failed at the Webflow edge; host serves no HTTPS
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+    file: null
+    note: TLS handshake failed at the Webflow edge; host serves no HTTPS
+  - path: /.well-known/api-catalog
+    status: 0
+    file: null
+    note: TLS handshake failed at the Webflow edge; host serves no HTTPS
+  - path: /.well-known/ai-plugin.json
+    status: 0
+    file: null
+    note: TLS handshake failed at the Webflow edge; host serves no HTTPS
+  - path: /.well-known/agent-card.json
+    status: 0
+    file: null
+    note: TLS handshake failed at the Webflow edge; host serves no HTTPS
+  - path: /.well-known/agent.json
+    status: 0
+    file: null
+    note: TLS handshake failed at the Webflow edge; host serves no HTTPS
+- host: www.leif.org
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+    note: TLS handshake failed at the Webflow edge; host serves no HTTPS
+  - path: /.well-known/openid-configuration
+    status: 0
+    file: null
+    note: TLS handshake failed at the Webflow edge; host serves no HTTPS
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+    file: null
+    note: TLS handshake failed at the Webflow edge; host serves no HTTPS
+  - path: /.well-known/api-catalog
+    status: 0
+    file: null
+    note: TLS handshake failed at the Webflow edge; host serves no HTTPS
+  - path: /.well-known/ai-plugin.json
+    status: 0
+    file: null
+    note: TLS handshake failed at the Webflow edge; host serves no HTTPS
+  - path: /.well-known/agent-card.json
+    status: 0
+    file: null
+    note: TLS handshake failed at the Webflow edge; host serves no HTTPS
+  - path: /.well-known/agent.json
+    status: 0
+    file: null
+    note: TLS handshake failed at the Webflow edge; host serves no HTTPS
+- host: api.leif.org
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+    file: null
+    note: 'AWS API Gateway default for an unmatched route: {"message":"Missing Authentication Token"}'
+  - path: /.well-known/openid-configuration
+    status: 403
+    file: null
+    note: 'AWS API Gateway default for an unmatched route: {"message":"Missing Authentication Token"}'
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+    file: null
+    note: 'AWS API Gateway default for an unmatched route: {"message":"Missing Authentication Token"}'
+  - path: /.well-known/api-catalog
+    status: 403
+    file: null
+    note: 'AWS API Gateway default for an unmatched route: {"message":"Missing Authentication Token"}'
+  - path: /.well-known/ai-plugin.json
+    status: 403
+    file: null
+    note: 'AWS API Gateway default for an unmatched route: {"message":"Missing Authentication Token"}'
+  - path: /.well-known/agent-card.json
+    status: 403
+    file: null
+    note: 'AWS API Gateway default for an unmatched route: {"message":"Missing Authentication Token"}'
+  - path: /.well-known/agent.json
+    status: 403
+    file: null
+    note: 'AWS API Gateway default for an unmatched route: {"message":"Missing Authentication Token"}'
+- host: app.leif.org
+  documents:
+  - path: /.well-known/security.txt
+    status: 504
+    file: null
+    note: origin gateway error; application is not running
+  - path: /.well-known/openid-configuration
+    status: 504
+    file: null
+    note: origin gateway error; application is not running
+  - path: /.well-known/oauth-authorization-server
+    status: 504
+    file: null
+    note: origin gateway error; application is not running
+  - path: /.well-known/api-catalog
+    status: 504
+    file: null
+    note: origin gateway error; application is not running
+  - path: /.well-known/ai-plugin.json
+    status: 504
+    file: null
+    note: origin gateway error; application is not running
+  - path: /.well-known/agent-card.json
+    status: 504
+    file: null
+    note: origin gateway error; application is not running
+  - path: /.well-known/agent.json
+    status: 504
+    file: null
+    note: origin gateway error; application is not running
+- host: sandbox.leif.org
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+    file: null
+    note: 'AWS API Gateway default for an unmatched route: {"message":"Missing Authentication Token"}'
+  - path: /.well-known/openid-configuration
+    status: 403
+    file: null
+    note: 'AWS API Gateway default for an unmatched route: {"message":"Missing Authentication Token"}'
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+    file: null
+    note: 'AWS API Gateway default for an unmatched route: {"message":"Missing Authentication Token"}'
+  - path: /.well-known/api-catalog
+    status: 403
+    file: null
+    note: 'AWS API Gateway default for an unmatched route: {"message":"Missing Authentication Token"}'
+  - path: /.well-known/ai-plugin.json
+    status: 403
+    file: null
+    note: 'AWS API Gateway default for an unmatched route: {"message":"Missing Authentication Token"}'
+  - path: /.well-known/agent-card.json
+    status: 403
+    file: null
+    note: 'AWS API Gateway default for an unmatched route: {"message":"Missing Authentication Token"}'
+  - path: /.well-known/agent.json
+    status: 403
+    file: null
+    note: 'AWS API Gateway default for an unmatched route: {"message":"Missing Authentication Token"}'
+- host: partners.leif.org
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+    note: 'Webflow catch-all: ''Invalid .well-known request'''
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+    note: 'Webflow catch-all: ''Invalid .well-known request'''
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+    note: 'Webflow catch-all: ''Invalid .well-known request'''
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+    note: 'Webflow catch-all: ''Invalid .well-known request'''
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+    note: 'Webflow catch-all: ''Invalid .well-known request'''
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+    note: 'Webflow catch-all: ''Invalid .well-known request'''
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+    note: 'Webflow catch-all: ''Invalid .well-known request'''
+- host: staging.leif.org
+  documents:
+  - path: /.well-known/security.txt
+    status: 503
+    file: null
+    note: origin gateway error; application is not running
+  - path: /.well-known/openid-configuration
+    status: 503
+    file: null
+    note: origin gateway error; application is not running
+  - path: /.well-known/oauth-authorization-server
+    status: 503
+    file: null
+    note: origin gateway error; application is not running
+  - path: /.well-known/api-catalog
+    status: 503
+    file: null
+    note: origin gateway error; application is not running
+  - path: /.well-known/ai-plugin.json
+    status: 503
+    file: null
+    note: origin gateway error; application is not running
+  - path: /.well-known/agent-card.json
+    status: 503
+    file: null
+    note: origin gateway error; application is not running
+  - path: /.well-known/agent.json
+    status: 503
+    file: null
+    note: origin gateway error; application is not running

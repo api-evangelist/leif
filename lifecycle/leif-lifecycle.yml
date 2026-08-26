@@ -1,0 +1,87 @@
+generated: '2026-08-25'
+method: probed
+source: live HTTP/TLS/DNS probes of every leif.org host, plus Internet Archive CDX for www.leif.org
+note: >-
+  Leif publishes no versioning policy, no deprecation policy, no SLA and no reachable
+  status page, because the company's public surface is no longer served. This file records
+  the observed lifecycle state of that surface rather than a policy Leif never published.
+  No StatusPage and no Deprecation pointer is emitted from it — status.leif.org is an
+  unresolvable CNAME and there is no deprecation policy to point at.
+
+versioning:
+  scheme: null
+  current_version: null
+  policy_url: null
+  evidence: >-
+    No developer portal, API reference or versioning policy has ever been visible on the
+    public site. The last Internet Archive capture of www.leif.org (2025-11-09) carries a
+    nav of Solutions / Tuition Products / Career Services / Use Cases / Company / Login and
+    no developer, API or docs entry.
+
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  deprecation_header: unknown
+  evidence: No public contract or documentation exists to state one.
+
+sla:
+  published: false
+  url: null
+
+status_page:
+  published: false
+  url: https://status.leif.org/
+  status: NXDOMAIN
+  evidence: >-
+    The archived www.leif.org footer linked https://status.leif.org/. The hostname still
+    carries a CNAME to dashboards.checklyhq.com in DNS but does not resolve to an address,
+    so the status page is unreachable. No StatusPage pointer is wired for this reason.
+
+surface_status:
+  state: dark
+  first_observed_dark: '2026-08-25'
+  last_known_good: '2025-11-09'
+  last_known_good_evidence: >-
+    Internet Archive CDX shows the last successful capture of https://www.leif.org/ at
+    timestamp 20251109072803 (HTTP 200, 22112 bytes). There is no successful capture in the
+    nine months since, which is consistent with the TLS failure observed below — the
+    archive crawler cannot complete a handshake either.
+  hosts:
+  - host: leif.org
+    observed: tls-handshake-failure
+    detail: >-
+      TLS alert internal error (alert 40) from the Webflow edge (AWS Global Accelerator
+      75.2.70.75 / 99.83.190.102). Plain HTTP 301-redirects to https://leif.org/, which then
+      fails, so there is no reachable entry point.
+  - host: www.leif.org
+    observed: tls-handshake-failure
+    detail: >-
+      TLS handshake failure (alert 40) on all three Webflow proxy addresses
+      (34.202.203.47, 54.243.86.28, 18.211.166.153) with SNI www.leif.org. The custom-domain
+      certificate is no longer provisioned.
+  - host: app.leif.org
+    observed: 504
+    detail: >-
+      nginx returns 504 Gateway Time-out for every path including /login, /health and
+      /api/. The application origin is not answering.
+  - host: staging.leif.org
+    observed: 503
+    detail: nginx 503 Service Temporarily Unavailable on every path.
+  - host: api.leif.org
+    observed: 403
+    detail: >-
+      AWS API Gateway with a valid *.leif.org certificate (issued 2026-07-12, so the ACM
+      renewal is still automated) that answers {"message":"Missing Authentication Token"}
+      for every path probed. That is the API Gateway default for a route that does not
+      match a configured resource, so no anonymous route exists on the stage.
+  - host: sandbox.leif.org
+    observed: 403
+    detail: Same AWS API Gateway unmatched-route default as api.leif.org.
+  - host: partners.leif.org
+    observed: 404
+    detail: Webflow project 404 for every path, including the previously indexed /isa/leif.
+  - host: leiforg.zendesk.com
+    observed: 404
+    detail: >-
+      The Zendesk help center that served Leif's borrower FAQ (/hc/en-us) returns a bare
+      404 "Not Found" — the help center has been removed.

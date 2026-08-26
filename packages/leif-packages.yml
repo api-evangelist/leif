@@ -1,0 +1,15 @@
+generated: '2026-08-25'
+method: searched
+source: >-
+  registry.npmjs.org (name + text search), pypi.org/pypi/<pkg>/json,
+  rubygems.org/api/v1/gems/<pkg>.json, and api.github.com repository/org search
+package_count: 0
+packages: []
+note: >-
+  Leif publishes no first-party client libraries. Direct name lookups for leif, leif-sdk,
+  leif-api, @leif/sdk and @leiforg/sdk return 404 on npm, PyPI and RubyGems (the npm name
+  "leif" and the RubyGems gem "leif" both exist but are unrelated third-party packages —
+  the gem's homepage is github.com/cloudapp/leif). GitHub has no leif, leiforg,
+  leif-technologies or leiftech organization (all 404), and no repository advertises
+  leif.org as its homepage. This is consistent with Leif never having run a public
+  developer program. No SDKs pointer is emitted.

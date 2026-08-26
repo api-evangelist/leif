@@ -1,0 +1,14 @@
+generated: '2026-08-25'
+method: searched
+source: >-
+  https://www.leif.org/ (last Internet Archive capture 20251109072803); live probes of
+  api.leif.org and sandbox.leif.org
+limit_count: 0
+rate_limits: []
+headers: []
+note: >-
+  No rate limits are documented anywhere, because Leif published no API reference. The two
+  live API hosts (api.leif.org, sandbox.leif.org) are AWS API Gateway stages that return
+  the unmatched-route default {"message":"Missing Authentication Token"} with no
+  X-RateLimit-*, RateLimit-* or Retry-After header on the response, so nothing could be
+  observed at runtime either.

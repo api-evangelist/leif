@@ -1,0 +1,12 @@
+generated: '2026-08-25'
+method: searched
+source: https://www.leif.org/ (last Internet Archive capture 20251109072803) and live probes of leif.org
+plan_count: 0
+plans: []
+note: >-
+  Leif never published plans or pricing. Its commercial model was a negotiated school
+  partnership — the archived site routes every commercial path to "Get In Touch" and
+  mailto:sales@leif.org, with no pricing page in the nav or the sitemap. The live site
+  cannot be checked because leif.org and www.leif.org fail the TLS handshake, so this is
+  recorded from the last archived capture rather than a live fetch. No Pricing pointer is
+  emitted.

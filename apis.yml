@@ -1,17 +1,55 @@
 aid: leif
 name: Leif
-description: 'Leif is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Leif (Leif Technologies, Inc.) was a New York City education-finance
+  technology company, founded in 2017 by Francis Larson, Jeffrey Groeber and Richard
+  Lee, that built an end-to-end platform for designing, originating, servicing and
+  financing outcomes-aligned tuition products for schools and bootcamps. Its product
+  line covered Income Share Agreements, contingent payment plans, tuition installment
+  plans and upfront payment, alongside career-services and advisory-insights modules,
+  and the platform handled student identity verification, credit evaluation, income
+  verification, disbursement, payment collection and program reporting for its school
+  partners. Leif publicly claimed more than 20,000 originations across 200+ partner
+  schools and over $400 million in arranged financing, and it raised a strategic
+  financing round totalling more than $60 million in 2021. Leif never operated a
+  public developer program: the archived marketing site carries no developer portal,
+  API reference or documentation nav, and the only API surface ever visible was the
+  private JSON API behind its own student and school applications (leif.org/api/*).
+  As of the 2026-08-25 probe the company''s entire public surface is dark — leif.org
+  and www.leif.org fail the TLS handshake at their Webflow edge, app.leif.org returns
+  504 on every path, the Zendesk help center is gone, and the api.leif.org and
+  sandbox.leif.org AWS API Gateway hosts answer only "Missing Authentication Token".'
 url: https://raw.githubusercontent.com/api-evangelist/leif/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
-specificationVersion: '0.20'
+x-tier: profiled
+x-tier-reason: enrichment-pipeline
+specificationVersion: '0.23'
 created: '2026-08-25'
 modified: '2026-08-25'
 tags:
 - Company
+- Education
+- Education-Finance
+- Income Share Agreement
+- Student Lending
+- Fintech
+- Financial-Services
+- Tuition
+- Payments
+- Lending
+- New York
+tags_raw:
+- Company
+- Education
+- Education Finance
+- Income Share Agreement
+- Student Lending
+- Fintech
+- Financial Services
+- Tuition
+- Payments
+- Lending
+- New York
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +58,46 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
+  url: https://www.leif.org/
+- type: SecondaryMarket
   url: https://forgeglobal.com/leif_stock/
+- type: DomainSecurity
+  url: security/leif-domain-security.yml
+- type: Lifecycle
+  url: lifecycle/leif-lifecycle.yml
+- type: WellKnownProbe
+  url: well-known/leif-well-known.yml
+- type: Packages
+  url: packages/leif-packages.yml
+- type: Plans
+  url: plans/leif-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/leif-rate-limits.yml
+- type: LLMsTxt
+  url: llms/leif-llms.txt
+x-enrichment:
+  date: '2026-08-25'
+  status: minimal
+  artifacts_added: 7
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    Leif's entire public surface is dark — leif.org and www.leif.org terminate the TLS
+    handshake at their Webflow edge, app.leif.org returns 504 on every path, the
+    leiforg.zendesk.com help center is gone, and the api.leif.org / sandbox.leif.org AWS API
+    Gateway hosts answer only the unmatched-route default "Missing Authentication Token",
+    with the last successful Internet Archive capture of the site dated 2025-11-09.
+  evidence:
+  - url: https://www.leif.org/
+    status: 0
+  - url: https://app.leif.org/login
+    status: 504
+  - url: https://api.leif.org/openapi.json
+    status: 403
+  - url: https://leiforg.zendesk.com/hc/en-us
+    status: 404
+  - url: https://partners.leif.org/isa/leif
+    status: 404
+  checked: '2026-08-25'

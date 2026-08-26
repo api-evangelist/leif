@@ -1,0 +1,51 @@
+# Leif
+
+> Leif (Leif Technologies, Inc.) was a New York City education-finance technology company,
+> founded in 2017, that built an end-to-end platform for designing, originating, servicing and
+> financing outcomes-aligned tuition products — Income Share Agreements, contingent payment
+> plans, tuition installment plans and upfront payment — for schools and bootcamps.
+
+## Status
+
+- **This company has no public API.** Leif never operated a developer program. The last
+  archived capture of its marketing site (2025-11-09) has no developer portal, API reference,
+  documentation, SDK or OpenAPI link anywhere in its navigation. The only API surface ever
+  visible was the private JSON API behind its own student and school applications
+  (`leif.org/api/students`, `/api/products/{id}`, `/api/commit/provider/{id}`), which was
+  never documented for third parties.
+- **The public surface is dark as of 2026-08-25.** `leif.org` and `www.leif.org` fail the TLS
+  handshake at their Webflow edge; `app.leif.org` returns HTTP 504 on every path;
+  `staging.leif.org` returns 503; `partners.leif.org` returns a Webflow 404 for every path;
+  the `leiforg.zendesk.com` help center returns 404; and `status.leif.org` does not resolve.
+- `api.leif.org` and `sandbox.leif.org` are still-provisioned AWS API Gateway hosts (valid
+  `*.leif.org` certificate issued 2026-07-12) but answer
+  `{"message":"Missing Authentication Token"}` — the API Gateway default for an unmatched
+  route — on every path probed, including `/openapi.json`, `/swagger.json`, `/graphql` and
+  every `/.well-known/*` path.
+
+## What Leif did
+
+- Income Share Agreement design, origination and program management for schools
+- Contingent payment plans, tuition installment plans and upfront tuition payment
+- Student identity verification, credit evaluation and income verification
+- Payment collection, servicing and program reporting for school partners
+- Career services (interview preparation) and advisory insights modules
+- Publicly claimed 20,000+ originations, 200+ partner schools, $400M+ in arranged financing
+
+## Machine-readable artifacts
+
+- No OpenAPI, Swagger, GraphQL SDL, AsyncAPI, Protobuf or WSDL contract is published.
+- No `/.well-known/*` document is served on any Leif host.
+- No A2A agent card, MCP server, `llms.txt`, Postman collection or first-party SDK exists.
+
+## API Evangelist profile
+
+- Repository: https://github.com/api-evangelist/leif
+- Surface probe record: `lifecycle/leif-lifecycle.yml`
+- `.well-known` probe record: `well-known/leif-well-known.yml`
+- Domain security posture: `security/leif-domain-security.yml`
+
+## Links
+
+- Website (unreachable as of 2026-08-25): https://www.leif.org/
+- Secondary-market listing: https://forgeglobal.com/leif_stock/
