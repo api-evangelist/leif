@@ -64,5 +64,91 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Leif is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/leif_stock/
+Leif (Leif Technologies, Inc.) was a New York City education-finance technology company, founded in 2017 by Francis Larson, Jeffrey Groeber and Richard Lee, that built an end-to-end platform for designing, originating, servicing and financing outcomes-aligned tuition products for schools and bootcamps. Its product line covered Income Share Agreements, contingent payment plans, tuition installment plans and upfront payment, alongside career-services and advisory-insights modules, and the platform handled student identity verification, credit evaluation, income verification, disbursement, payment collection and program reporting for its school partners. Leif publicly claimed more than 20,000 originations across 200+ partner schools and over $400 million in arranged financing, and it raised a strategic financing round totalling more than $60 million in 2021. Leif never operated a public developer program: the archived marketing site carries no developer portal, API reference or documentation nav, and the only API surface ever visible was the private JSON API behind its own student and school applications (leif.org/api/*). As of the 2026-08-25 probe the company's entire public surface is dark — leif.org and www.leif.org fail the TLS handshake at their Webflow edge, app.leif.org returns 504 on every path, the Zendesk help center is gone, and the api.leif.org and sandbox.leif.org AWS API Gateway hosts answer only "Missing Authentication Token".
+
+**Areas:** Company · Education · Education Finance · Income Share Agreement · Student Lending · Fintech · Financial Services · Tuition · Payments · Lending · New York
+
+## Leif on APIs.io
+
+Everything profiled for Leif is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/leif/](https://apis.io/providers/leif/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Leif Domain Security](https://apis.io/security/leif/leif-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Leif Plans Pricing](https://apis.io/plans/leif/leif-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Leif Rate Limits](https://apis.io/rate-limits/leif/leif-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.leif.org/)
+
+## API Evangelist rating
+
+**Kin Score 3.3** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 51.8 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 0.0 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Education & Research
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/leif/](https://apis.io/providers/leif/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Leif: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/leif/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
